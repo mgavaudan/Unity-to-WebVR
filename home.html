@@ -36,7 +36,7 @@
 	<body>
 		<div class="button">Start VR Mode</div>
 
-		<!-- libraries for VR control -->
+		<!-- libraries for Three.js -->
 		<script src="js/three.min.js"></script>
 		<script src="js/ColladaLoader.js"></script>
 		<!-- THREE.js effect which renders a scene with two cameras in it.
@@ -51,6 +51,13 @@
 		On mobile, supports rotation via DeviceOrientation.
 		On desktop, supports looking with the mouse or with arrow keys. -->
 		<script src="js/webvr-polyfill.js"></script>
+		<!-- Feature detects for WebVR (or the polyfill).
+		If WebVR is available, places an active WebVR button on the bottom.
+		Other means of getting into VR mode: double click anywhere, double tap anywhere.
+		For desktop, if an HMD is connected, goes into split-screen rendering mode. Otherwise, goes into immersive fullscreen mode (with pointer lock).
+		For mobile, goes into Cardboard side-by-side rendering mode. -->
+		<script src="js/webvr-manager.js"></script>
+		<!-- Main JS file connecting all libraries -->
 		<script src="js/main.js"></script>
 		
 

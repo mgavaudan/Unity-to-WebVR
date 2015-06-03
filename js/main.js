@@ -71,6 +71,7 @@ function init() {
 	};
 
 	vrEffect = new THREE.VREffect(renderer, VREffectLoaded);
+	var manager = new WebVRManager(renderer, vrEffect, {hideButton: false});
 	vrControls = new THREE.VRControls(camera);
 	function VREffectLoaded(error) {
 		if (error) {

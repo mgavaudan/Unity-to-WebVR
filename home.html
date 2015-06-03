@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GacVR</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #f0f0f0;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			.button {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				padding: 8px;
+				color: #FFF;
+				background-color: #555;
+			}
+
+			.button:hover {
+				cursor: pointer;
+				background-color: rgb(18, 36, 70);
+			}
+
+			.button.error {
+				pointer-events: none;
+				background-color: red;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="button">Start VR Mode</div>
+
+		<!-- libraries for VR control -->
+		<script src="js/three.min.js"></script>
+		<script src="js/ColladaLoader.js"></script>
+		<!-- THREE.js effect which renders a scene with two cameras in it.
+		Puts the two images side-by-side. -->
+		<script src="js/VREffect.js"></script>
+		<!-- THREE.js controls which take advantage of the WebVR API.
+		Usually attached to the THREE.Camera to look around the scene. -->
+		<script src="js/VRControls.js"></script>
+		<!-- For fps info -->
+		<script src="js/stats.min.js"></script>
+		<!-- For Cardboard rendering.
+		On mobile, supports rotation via DeviceOrientation.
+		On desktop, supports looking with the mouse or with arrow keys. -->
+		<script src="js/webvr-polyfill.js"></script>
+		<script src="js/main.js"></script>
+		
+
+		
+		
+	</body>
+</html>
